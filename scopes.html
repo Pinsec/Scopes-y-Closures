@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Práctica</title>
+	<meta name="description" content="Scopes y Closures"></meta>
+	<link rel="icon" type="image/x-icon">
+
+<style>
+
+div{
+	border: 1px solid gray;
+	margin: 20px 30%;
+	width: 500px;
+	text-align: center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="identificador_1">El siguiente número es la muestra de una variable global: </div>
+<div id="identificador_2">El siguiente número es la muestra de una variable local:</div>
+<div id="identificador_3">El siguiente número es la muestra de una variable fuera de alcance:</div>
+
+<script>
+	var global = 900;
+	unafuncion();
+	otrafuncion();
+	funciontres();
+	function unafuncion(){
+		document.getElementById("identificador_1").innerHTML += global;
+	}
+	function otrafuncion(){
+		var local_de_dos = 500;
+		document.getElementById("identificador_2").innerHTML += local_de_dos;
+	}
+	function funciontres(){
+		document.getElementById("identificador_3").innerHTML += local_de_dos;
+	}
+</script>
+
+</body>
+
+</html>
